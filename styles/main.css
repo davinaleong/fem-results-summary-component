@@ -30,8 +30,8 @@
 :root {
   --clr-primary-400: hsl(241, 81%, 54%);
   --clr-primary-500: hsl(252, 100%, 67%);
-  --clr-primary-800: hsla(256, 72%, 46%, 1);
-  --clr-primary-900: hsla(241, 72%, 46%, 0);
+  --clr-primary-600: hsl(256, 72%, 46%, 1);
+  --clr-primary-900: hsl(241, 72%, 46%, 0);
 
   --clr-red-400: hsl(0, 100%, 67%);
   --clr-orange-400: hsl(39, 100%, 56%);
@@ -141,7 +141,7 @@ body {
   position: relative;
   font-size: var(--fz-base);
   font-family: var(--ff-body);
-  font-weight: var(--fw-bold);
+  font-weight: var(--fw-regular);
   min-height: 100vh;
   overflow-x: hidden;
 }
@@ -156,6 +156,7 @@ body {
 
 .body-grid {
   display: grid;
+  grid-template-rows: repeat(2, max-content);
   place-items: center;
 }
 
@@ -248,17 +249,18 @@ a:where(:hover, :focus, :focus-visible) {
 }
 
 .btn {
-  --btn-clr: var(--clr-gray-100);
-  --btn-bg-clr: var(--clr-gray-900);
-  --btn-bg-img: none;
-  --btn-border-clr: var(--clr-gray-900);
+  --btn-clr: var(--clr-neutral-50);
+  --btn-bg-clr: var(--clr-primary-900);
+  --btn-bg-img: linear-gradient(to bottom, var(--clr-neutral-800) 0%, var(--clr-neutral-800) 100%);
+  --btn-border-clr: transparent;
 
-  --btn-hover-clr: var(--clr-gray-100);
-  --btn-hover-bg-clr: var(--clr-gray-800);
-  --btn-hover-bg-img: none;
-  --btn-hover-border-clr: var(--clr-gray-800);
+  --btn-hover-clr: var(--clr-neutral-50);
+  --btn-hover-bg-clr: var(--clr-primary-900);
+  --btn-hover-bg-img: linear-gradient(to bottom, var(--clr-primary-500) 0%, var(--clr-primary-600) 100%);
+  --btn-hover-border-clr: transparent;
 
   --btn-padding: var(--size-f-200) var(--size-f-400);
+  --btn-border-radius: 100vmax;
 
   display: inline-flex;
   align-items: center;
@@ -268,9 +270,9 @@ a:where(:hover, :focus, :focus-visible) {
   background-color: var(--btn-bg-clr);
   background-image: var(--btn-bg-img);
   border: thin solid var(--btn-border-clr);
+  border-radius: var(--btn-border-radius);
   padding: var(--btn-padding);
   transition: all 0.3s ease-in-out;
-  border-radius: var(--size-f-100);
 }
 
 .btn:where(:hover, :focus, :focus-visible) {
@@ -312,8 +314,8 @@ a:where(:hover, :focus, :focus-visible) {
 .text-primary-500 {
   color: var(--clr-primary-500);
 }
-.text-primary-800 {
-  color: var(--clr-primary-800);
+.text-primary-600 {
+  color: var(--clr-primary-600);
 }
 .text-primary-900 {
   color: var(--clr-primary-900);
@@ -392,8 +394,8 @@ a:where(:hover, :focus, :focus-visible) {
   background-color: var(--clr-primary-500);
 }
 
-.bg-primary-800 {
-  background-color: var(--clr-primary-800);
+.bg-primary-600 {
+  background-color: var(--clr-primary-600);
 }
 
 .bg-primary-900 {

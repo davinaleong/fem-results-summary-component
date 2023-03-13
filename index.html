@@ -16,7 +16,37 @@
   <script defer src="./scripts/main.js"></script>
 </head>
 
-<body>
+<body class="body-grid">
+  <main class="container">
+    <h1 class="visually-hidden">Results Summary Component</h1>
+
+    <div class="card">
+      <div class="card__header">
+        <h2>Your Result</h2>
+        <div class="result">
+          76
+          <div class="result__label">of 100</div>
+        </div>
+        <p>Great</p>
+        <p>You scored higher than 65% of the people who have taken these tests.</p>
+      </div>
+      <div class="card__body">
+        <h2>Summary</h2>
+        <ul class="summary-list" role="list">
+          <li class="summary-list__item">
+            <img src="./images/icon-reaction.svg" alt="">
+            <p>Reaction</p>
+            <div class="summary-list__item__result">
+              <div>80</div>
+              <div>/</div>
+              <div>100</div>
+            </div>
+          </li>
+        </ul>
+        <button class="btn btn-full">Continue</button>
+      </div>
+    </div>
+  </main>
   <footer class="attribution">
     <div class="container | p-v-y-400">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
