@@ -34,10 +34,11 @@
   --clr-primary-600: hsla(256, 72%, 46%, 1);
   --clr-primary-900: hsla(241, 72%, 46%, 0);
 
+  --clr-red-50: hsl(0, 100%, 95%);
   --clr-red-400: hsl(0, 100%, 67%);
-  --clr-orange-400: hsl(39, 100%, 56%);
-  --clr-teal-400: hsl(166, 100%, 37%);
-  --clr-blue-400: hsl(234, 85%, 45%);
+  --clr-orange-50: hsl(39, 100%, 95%);--clr-orange-400: hsl(39, 100%, 56%);
+  --clr-teal-50: hsl(166, 100%, 95%);--clr-teal-400: hsl(166, 100%, 37%);
+  --clr-blue-50: hsl(234, 85%, 95%);--clr-blue-400: hsl(234, 85%, 45%);
   
   --clr-neutral-50: hsl(0, 0%, 100%);
   --clr-neutral-100: hsl(221, 100%, 96%);
@@ -316,6 +317,22 @@ a:where(:hover, :focus, :focus-visible) {
   align-self: start;
 }
 
+.summary-list__item {
+  --summary-item-border-radius: var(--size-f-300);
+
+  display: grid;
+  grid-template-columns: 0.1fr 0.6fr 0.3fr;
+  align-items: center;
+  border-radius: var(--summary-item-border-radius);
+}
+
+.summary-list__item__result {
+  --summary-item-result-gap: var(--size-f-200);
+
+  display: flex;
+  gap: var(--summary-item-result-gap);
+}
+
 /** Content - End **/
 
 /** Utility **/
@@ -349,14 +366,26 @@ a:where(:hover, :focus, :focus-visible) {
   color: var(--clr-primary-900);
 }
 
+.text-red-50 {
+  color: var(--clr-red-50);
+}
 .text-red-400 {
   color: var(--clr-red-400);
+}
+.text-orange-50 {
+  color: var(--clr-orange-50);
 }
 .text-orange-400 {
   color: var(--clr-orange-400);
 }
+.text-teal-50 {
+  color: var(--clr-teal-50);
+}
 .text-teal-400 {
   color: var(--clr-teal-400);
+}
+.text-blue-50 {
+  color: var(--clr-blue-50);
 }
 .text-blue-400 {
   color: var(--clr-blue-400);
@@ -430,16 +459,32 @@ a:where(:hover, :focus, :focus-visible) {
   background-color: var(--clr-primary-900);
 }
 
+.bg-red-50 {
+  background-color: var(--clr-red-50);
+}
+
 .bg-red-400 {
   background-color: var(--clr-red-400);
+}
+
+.bg-orange-50 {
+  background-color: var(--clr-orange-50);
 }
 
 .bg-orange-400 {
   background-color: var(--clr-orange-400);
 }
 
+.bg-teal-50 {
+  background-color: var(--clr-teal-50);
+}
+
 .bg-teal-400 {
   background-color: var(--clr-teal-400);
+}
+
+.bg-blue-50 {
+  background-color: var(--clr-blue-50);
 }
 
 .bg-blue-400 {
