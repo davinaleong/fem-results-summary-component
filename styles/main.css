@@ -18,6 +18,7 @@
       - Utility - Border Radius
       - Utility - Position
       - Utility - Text Decoration
+      - Utility - Opacity
 */
 
 /** Fonts **/
@@ -30,8 +31,8 @@
 :root {
   --clr-primary-400: hsl(241, 81%, 54%);
   --clr-primary-500: hsl(252, 100%, 67%);
-  --clr-primary-600: hsl(256, 72%, 46%, 1);
-  --clr-primary-900: hsl(241, 72%, 46%, 0);
+  --clr-primary-600: hsla(256, 72%, 46%, 1);
+  --clr-primary-900: hsla(241, 72%, 46%, 0);
 
   --clr-red-400: hsl(0, 100%, 67%);
   --clr-orange-400: hsl(39, 100%, 56%);
@@ -210,7 +211,7 @@ b {
 
 .container {
   --container-width: var(--root-container-width);
-  --container-padding: var(--size-f-200);
+  --container-padding: 0;
 
   max-width: var(--container-width);
   padding-inline: var(--container-padding);
@@ -287,6 +288,33 @@ a:where(:hover, :focus, :focus-visible) {
 }
 
 /** Content - Layout **/
+.card__header {
+  --card-header-border-radius: var(--size-f-600);
+
+  background-color: var(--clr-primary-500);
+  background-image: linear-gradient(to bottom, var(--clr-primary-500) 0%, var(--clr-primary-400) 100%);
+  border-radius: 0 0 var(--card-header-border-radius) var(--card-header-border-radius);
+}
+
+.result {
+  --result-size: calc(var(--size-v-900) * 1.5);
+
+  width: var(--result-size);
+  height: var(--result-size);
+  display: grid;
+  grid-template-rows: 0.75fr 0.25fr;
+  background-image: linear-gradient(to bottom, hsla(256, 72%, 46%, 1) 0%, hsla(241, 72%, 46%, 0) 100%);
+  border-radius: 50%;
+  margin-inline: auto;
+}
+
+.result__number {
+  align-self: end;
+}
+
+.result__label {
+  align-self: start;
+}
 
 /** Content - End **/
 
@@ -2890,6 +2918,91 @@ a:where(:hover, :focus, :focus-visible) {
 
 .td-dashed {
   text-decoration: dashed;
+}
+
+/** Utility - Opacity **/
+.o-0 {
+  opacity: 0;
+}
+
+.o-05 {
+  opacity: 0.05;
+}
+
+.o-10 {
+  opacity: 0.1;
+}
+
+.o-15 {
+  opacity: 0.15;
+}
+
+.o-20 {
+  opacity: 0.2;
+}
+
+.o-25 {
+  opacity: 0.25;
+}
+
+.o-30 {
+  opacity: 0.3;
+}
+
+.o-35 {
+  opacity: 0.35;
+}
+
+.o-40 {
+  opacity: 0.4;
+}
+
+.o-45 {
+  opacity: 0.45;
+}
+
+.o-50 {
+  opacity: 0.5;
+}
+
+.o-55 {
+  opacity: 0.55;
+}
+
+.o-60 {
+  opacity: 0.6;
+}
+
+.o-65 {
+  opacity: 0.65;
+}
+
+.o-70 {
+  opacity: 0.7;
+}
+
+.o-75 {
+  opacity: 0.75;
+}
+
+.o-80 {
+  opacity: 0.8;
+}
+
+.o-85 {
+  opacity: 0.85;
+}
+
+.o-90 {
+  opacity: 0.9;
+}
+
+.o-95 {
+  opacity: 0.95;
+}
+
+.o-100 {
+  opacity: 1;
 }
 
 /** Utility - End **/
